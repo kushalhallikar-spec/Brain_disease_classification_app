@@ -7,8 +7,10 @@ from tensorflow.keras.models import load_model
 from werkzeug.utils import secure_filename
 import base64
 
-# -------- OpenAI --------
-from openai import OpenAI
+import os
+import openai
+
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 # -------------------- Flask App -------------------- #
 app = Flask(__name__)
