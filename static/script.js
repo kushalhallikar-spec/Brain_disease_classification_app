@@ -8,8 +8,10 @@ const userInput = document.getElementById("userInput");
 const fileInput = document.getElementById("fileInput");
 const chatBox = document.getElementById("chatBox");
 
-// Your OpenAI API key (for local testing only)
-const OPENAI_API_KEY = "YOUR_API_KEY_HERE";
+const response = await fetch("/ask", {
+    method: "POST",
+    body: JSON.stringify({ question: userInput })
+});
 
 // Send button click event
 sendBtn.addEventListener("click", () => {
