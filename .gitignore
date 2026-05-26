@@ -1,0 +1,10 @@
+venv/
+model/
+dataset/
+data/
+images/
+*.h5
+*.dll
+*.pyd
+__pycache__/
+.env
